@@ -30,19 +30,15 @@ async function searchPokemon(name){
 document.addEventListener("DOMContentLoaded", async function(){
 
     let display = document.querySelector("#pokemon");
-    let displayname = document.querySelector("#pokemon_title")
+    let displayname = document.querySelector("#pokemon_name")
 
         let randomPokemon = await getData();
         let name = await searchPokemon(randomPokemon);
         // displayname.innerHTML = `<h1>"</h1>`        
-        display.innerHTML = `  <img src="${output}" class="pic" alt="${name}">
-
-    `
+        display.innerHTML = `  <img src="${output}" class="pic" alt="${name}">`
+        displayname.innerHTML = `<h2>${randomPokemon}</h2>`;
         
 
-   
-
-    
 
 })
 
