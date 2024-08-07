@@ -34,3 +34,7 @@ body{
     z-index: 20;
 }
 
+#pokemon {
+    touch-action: manipulation;
+  }
+
