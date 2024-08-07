@@ -42,6 +42,14 @@ document.addEventListener("DOMContentLoaded", async function(){
         displayname.innerHTML = `<h2 id="name_align">${randomPokemon}</h2>`;
     })
 
+    document.querySelector("#pokemon").addEventListener("touchend", async function(){
+
+        randomPokemon = await getData();
+        console.log(randomPokemon);
+        name = await searchPokemon(randomPokemon);
+        display.innerHTML = `  <img src="${output}" class="pic" alt="${name}">`
+        displayname.innerHTML = `<h2 id="name_align">${randomPokemon}</h2>`;
+    })
 
         let randomPokemon = await getData();
         console.log(randomPokemon);
