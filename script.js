@@ -7,6 +7,7 @@ const url = jsonbin_root + jsonbin_base_id;
 let output = "";
 let name = "";
 let i = 0;
+let randomPokemon = "";
 
 //using axios.get to get response from jsonbin and pass to renderList for display of data
 //on screen for viewing
@@ -32,15 +33,29 @@ document.addEventListener("DOMContentLoaded", async function(){
     let display = document.querySelector("#pokemon");
     let displayname = document.querySelector("#pokemon_name")
 
+    document.querySelector("#pokemon").addEventListener("click", async function(){
+
+        randomPokemon = await getData();
+        console.log(randomPokemon);
+        name = await searchPokemon(randomPokemon);
+        display.innerHTML = `  <img src="${output}" class="pic" alt="${name}">`
+        displayname.innerHTML = `<h2 id="name_align">${randomPokemon}</h2>`;
+    })
+
+
         let randomPokemon = await getData();
+        console.log(randomPokemon);
         let name = await searchPokemon(randomPokemon);
         // displayname.innerHTML = `<h1>"</h1>`        
         display.innerHTML = `  <img src="${output}" class="pic" alt="${name}">`
-        displayname.innerHTML = `<h2>${randomPokemon}</h2>`;
+        displayname.innerHTML = `<h2 id="name_align">${randomPokemon}</h2>`;
         
 
 
 })
+
+
+
 
 // Function to generate a random integer between min (inclusive) and max (inclusive)
 function getRandomInt(min, max) {
