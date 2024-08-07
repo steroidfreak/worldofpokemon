@@ -2,7 +2,7 @@
 
     position: absolute;
     top: 10%;
-    left: 30%;
+    left: 15%;
     /* width: 60%; */
     /* height: 60%; */
     /* object-fit: cover; */
@@ -13,7 +13,7 @@ body{
 
     background-image: url('city.jpg');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
 }
