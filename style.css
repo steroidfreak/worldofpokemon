@@ -1,11 +1,9 @@
 .pic{
 
     position: absolute;
-    top: 10%;
-    left: 30%;
-    /* width: 60%; */
-    /* height: 60%; */
-    /* object-fit: cover; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 5;
 }
 
@@ -23,13 +21,15 @@ body{
     text-align: center ;
 }
 
-#pokemon_name{
-    position: absolute;
-    top: 90%;
-    left: 45%;
-    color: black;
-    text-align: center ;
+#pokemon_name {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 80%; /* Added to stick to the bottom */
+    left: 50%; /* Changed from 40% to 50% to center horizontally */
+    color: white;
+    text-align: center;
     z-index: 10;
+    font-size: larger;
+    transform: translateX(-50%); /* Added to center horizontally */
 }
 
 #clickMe{
